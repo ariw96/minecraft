@@ -1,0 +1,199 @@
+@font-face {
+    font-family: "mincraft";
+    src: url('./fonts/Minecraft.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body {
+    font-family: "mincraft";
+    background: url('./images/dirt.jpg');
+}
+
+.opening {
+    height: 100vh;
+    background: url('./images/dirt.jpg');
+    background: url();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.opening__logo {
+    background: url('./images/logo.png') no-repeat center center/cover;
+    height: 20rem;
+    width: 70rem;
+}
+
+.opening button {
+    margin-top: 2rem;
+    font-family: "mincraft";
+    font-size: 3rem;
+    width: 10rem;
+    height: 4rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: royalblue;
+}
+
+.game-board {
+    display: grid;
+    background-color: white;
+    width: 100vmin;
+    height: 100vmin;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.sky {
+    background-color: skyblue;
+}
+
+.cloud {
+    background-color: white;
+}
+
+.grass {
+    background: url('./images/grass.jpg') no-repeat center center/cover;
+}
+
+.tree {
+    background: url('./images/tree.jpg') no-repeat center center/cover;
+}
+
+.trunk {
+    background: url('./images/trunk.jpg') no-repeat center center/cover;
+}
+
+.stone {
+    background: url('./images/stone.jpg') no-repeat center center/cover;
+}
+
+.dirt {
+    background: url('./images/dirt.jpg') no-repeat center center/cover;
+}
+
+.game-board div:hover {
+    border: 1px dotted white;
+}
+
+.sidebar {
+    background-color: black;
+    width: 20vmin;
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar__tools {
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+}
+
+.pickaxe {
+    background: url('./images/pickaxe.png') no-repeat center center/cover;
+}
+
+.shovel {
+    background: url("./images/shovel.png") no-repeat center center/cover;
+}
+
+.axe {
+    background: url('./images/axe.png') no-repeat center center/cover;
+}
+
+.tool {
+    height: 10rem;
+    width: 8rem;
+    border: 2px solid white;
+    margin-bottom: 20px;
+}
+
+#inventory {
+    height: 4rem;
+    width: 4rem;
+    border: 1px solid rgb(63, 35, 201);
+    margin: 0 auto;
+}
+
+.selected-tool {
+    background-color: royalblue;
+    border: transparent;
+}
+
+form {
+    text-align: center;
+}
+
+form input {
+    margin-top: 2rem;
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: white 1px solid;
+    opacity: 0.8;
+}
+
+form input:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.display-none {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .opening__logo {
+        height: 70rem;
+        width: 30rem;
+    }
+    .opening button {
+        margin-top: 2rem;
+        font-size: 3rem;
+        width: 8rem;
+        height: 3rem;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        background-color: black;
+        width: 100vmin;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+    }
+    .sidebar__tools {
+        flex-direction: row;
+        margin-top: 0;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .tool {
+        margin-bottom: 0;
+        margin-right: 1.5rem;
+        height: 7rem;
+    }
+    .inventory {
+        margin: initial;
+    }
+    form input {
+        margin-top: 0;
+        margin-left: 10px;
+        padding: 5px 20px;
+    }
+}
